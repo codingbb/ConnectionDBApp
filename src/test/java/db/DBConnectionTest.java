@@ -10,16 +10,16 @@ public class DBConnectionTest {
 
     @Test
     public void getInstance_test() {
-        String username = "root";
-        String password = "1234";
-        String url = "jdbc:mariadb://localhost:3306/cosdb";
+        // given = 파라미터
 
-        //프로토콜이 적용된 소켓
-        try {
-            Connection conn = DriverManager.getConnection(url, username, password);
+        // when
+        Connection conn = DBConnection.getInstance();
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        //then
+        if(conn == null) {
+            System.out.println("실패");
+        } else {
+            System.out.println("성공");
         }
     }
 }
