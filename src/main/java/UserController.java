@@ -1,3 +1,5 @@
+import controller.RequestMapping;
+
 public class UserController {
 
     @RequestMapping(uri="/insert")

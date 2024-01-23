@@ -92,6 +92,7 @@ public class BankDAO {
     public List<Account> selectAll() {
         Connection conn = DBConnection.getInstance();
         try {
+            System.out.println("t실행됨ㅂ");
             String sql = "select * from account_tb order by number desc";
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
